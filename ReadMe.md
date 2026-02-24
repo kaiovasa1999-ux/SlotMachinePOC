@@ -1,9 +1,8 @@
 # Betty  Console Slote Machine Application
-.NET 10 consle Applcation
+.NET 10 version
 
 ## Commands
 `deposit <amount>` · `withdrawal <amount>` · `bet <amount>` · `history` · `exit`
-
 ---
 
 ## Architecture
