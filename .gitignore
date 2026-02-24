@@ -1,0 +1,51 @@
+# .NET build outputs
+bin/
+obj/
+[Bb]in/
+[Oo]bj/
+
+# .NET user-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa]rm/
+[Aa]rm64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Node.js / Frontend
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Test results
+TestResults/
+[Tt]est[Rr]esult*/
+*.trx
+*.coverage
+*.coveragexml
+
+# Visual Studio
+.vs/
+*.vsidx
+*.vspscc
+
+# Rider
+.idea/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

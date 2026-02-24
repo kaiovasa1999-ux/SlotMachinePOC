@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Betty.TEST/Betty.TEST.csproj" Id="cb10805d-89de-438e-aa20-43ca542235e3" />
+  <Project Path="Betty/Betty.csproj" />
+</Solution>
