@@ -1,6 +1,5 @@
 ﻿using Betty.Core.Models;
 using Betty.Infrastructure;
-using Betty.Infrastrucutre;
 using Microsoft.Extensions.Configuration;
 
 var config = new ConfigurationBuilder()
@@ -24,4 +23,6 @@ var console = new MyConsole();
 var game = new Game(wallet, settings, new MyRandom());
 var application = new ApplicationInteractor(wallet, game, console);
 
+
+//starts the how program
 application.Run();

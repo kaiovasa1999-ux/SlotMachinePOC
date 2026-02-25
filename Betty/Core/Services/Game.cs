@@ -4,11 +4,11 @@ using Betty.Core.Models;
 
 public class Game : IGame
 {
-    private readonly Wallet _wallet;
+    private readonly IWallet _wallet;
     private readonly GameSettings _settings;
     private readonly IRandom _random;
 
-    public Game(Wallet wallet, GameSettings settings, IRandom random)
+    public Game(IWallet wallet, GameSettings settings, IRandom random)
     {
         _wallet  = wallet;
         _random = random;
@@ -19,6 +19,9 @@ public class Game : IGame
     {
         if (amount < _settings.MinBet || amount > _settings.MaxBet)
             throw GameErrors.InvalidBetAmount(_settings.MinBet, _settings.MaxBet);
+
+        if (amount > _wallet.Balance)
+            throw GameErrors.InsufficientFundsForBet(_wallet.Balance);
 
         var betOutcome = BetOutcome(amount);
         _wallet.ChangeBalanceBaseOnBetOutcome(amount, betOutcome);

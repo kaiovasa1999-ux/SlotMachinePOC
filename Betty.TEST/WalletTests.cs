@@ -113,6 +113,7 @@ public class WalletTests
 
     #region BetOtucomeValidation
 
+
     [Fact]
 
     public void BetWIN_IncreaseBalance()

@@ -47,13 +47,12 @@ public class Wallet : IWallet
     public void ChangeBalanceBaseOnBetOutcome(decimal initialBetAmount, decimal betOutcome)
     {
         AmountMustBePositive(initialBetAmount);
+
+        //can be negative if betOutcome =0
         decimal totalDiff = betOutcome - initialBetAmount;
 
-        //totalDiff may be negative
-        if ((Balance + totalDiff) <0)
-            throw WalletErrors.InsufficientFunds(Balance);
-
         Balance += totalDiff;
+
         _repo.AddTransactionData(new TransactionData
         {
             Type = totalDiff >= 0 ? TransactionDataType.BetWin : TransactionDataType.BetLoss,

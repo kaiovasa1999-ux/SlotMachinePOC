@@ -1,6 +1,6 @@
 ﻿using Betty.Core.Interfaces;
 
-namespace Betty.Infrastrucutre;
+namespace Betty.Infrastructure;
 
 public class MyRandom : IRandom
 {
